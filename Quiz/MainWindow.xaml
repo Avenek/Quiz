@@ -1,0 +1,23 @@
+﻿<Window x:Class="Quiz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz"
+        xmlns:vm="clr-namespace:Quiz.ViewModel"
+        mc:Ignorable="d"
+        Title="Quiz" Height="450" Width="800"
+        Visibility="{Binding MainWindowVisibility}">
+    <Window.DataContext>
+        <vm:MainViewModel x:Name="mainViewModel"/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <ListBox Visibility="{Binding QuizListVisibility}" ItemsSource="{Binding Quizes, Mode=OneWay}" SelectedIndex="{Binding SelectedQuiz, Mode=TwoWay}" HorizontalAlignment="Center" Width="430" Height="NaN" Margin="0,10,0,10"/>
+        <Button Visibility="{Binding StartQuizVisibility}" Content="Rozpocznij" Command="{Binding StartQuiz}" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Row="1" VerticalAlignment="Top" Height="62" Width="284"/>
+        <Frame Name="MainFrame" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
