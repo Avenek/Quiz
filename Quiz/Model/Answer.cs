@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Quiz.Model
 {
-    class Answer
+    public class Answer
     {
-        string content;
-        bool isCorrect;
+        public string content {  get; set; }
+        public bool isCorrect { get; set; }
+        public bool isChoosen { get; set; }
     }
 }

@@ -32,8 +32,8 @@ namespace Quiz.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedQuiz)));
             }
         }
-        private List<string> quizes;
-        public List<string> Quizes
+        private List<Model.Quiz> quizes;
+        public List<Model.Quiz> Quizes
         {
             get => quizes;
             set
@@ -63,7 +63,6 @@ namespace Quiz.ViewModel
             }
         }
 
-
         public MainViewModel()
         {
 
@@ -89,6 +88,8 @@ namespace Quiz.ViewModel
                              QuizListVisibility = Visibility.Collapsed;
                              StartQuizVisibility = Visibility.Collapsed;
                              frame.Navigate(new QuizPage());
+                            // model.StartQuiz();
+                             QuizViewModel quizViewModel = new QuizViewModel();
                          }
                      }
                     ,
@@ -108,7 +109,7 @@ namespace Quiz.ViewModel
 
                      (o) =>
                      {
-
+                         throw new NotImplementedException();
                      }
                     ,
                     (o) => true

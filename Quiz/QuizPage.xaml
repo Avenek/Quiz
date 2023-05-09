@@ -10,41 +10,6 @@
     <Page.DataContext>
         <vm:QuizViewModel x:Name="QuizViewModel"/>
     </Page.DataContext>
-    <Page.Resources>
-        <Style TargetType="CheckBox" x:Key="WrappedCheckBoxStyle">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="CheckBox">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Rectangle Width="15" Height="15" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="1"/>
-                            <TextBlock Grid.Column="1" Margin="10,0,0,0" Text="{TemplateBinding Content}" TextWrapping="Wrap"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style TargetType="CheckBox" x:Key="WrappedCheckBoxStyleRight">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="CheckBox">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" Text="{TemplateBinding Content}" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="10,0,120,0" Width="235" Grid.ColumnSpan="2"/>
-                            <Rectangle Grid.Column="1" Width="15" Height="15" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="1" Margin="0,0,90,0" HorizontalAlignment="Right"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-
-        </Style>
-    </Page.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -58,18 +23,27 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Content="Pytanie" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="2" Height="42" Width="117"/>
-        <Label Content="{Binding QuestionContent, Mode=OneWay}" FontSize="24" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="42" Width="147"/>
+        <Label Content="{Binding QuestionContent.content, Mode=OneWay}" FontSize="24" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="42" Width="147"/>
         <StackPanel Grid.Row="2">
-            <CheckBox Style="{StaticResource WrappedCheckBoxStyle}" Content="{Binding FirstAnswer, Mode=OneWay}" HorizontalAlignment="Left" Margin="42,9,0,0" Grid.Row="2" Width="365"/>
-            <CheckBox Style="{StaticResource WrappedCheckBoxStyle}" Content="{Binding ThirdAnswer, Mode=OneWay}" HorizontalAlignment="Left" Margin="42,37,0,30" Grid.Row="2" UseLayoutRounding="False" Width="365"/>
+            <CheckBox Width="360" Height="44" Margin="30,10,0,0" VerticalAlignment="Top">
+                <TextBlock Text="{Binding FirstAnswer.content, Mode=OneWay}" Background="{Binding FirstAnswerBackground}" TextWrapping="Wrap"/>
+            </CheckBox>
+            <CheckBox Width="360" Height="44" Margin="30,10,0,0" VerticalAlignment="Bottom">
+                <TextBlock Text="{Binding ThirdAnswer.content, Mode=OneWay}" Background="{Binding ThirdAnswerBackground}" TextWrapping="Wrap"/>
+            </CheckBox>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <CheckBox Style="{StaticResource WrappedCheckBoxStyleRight}" Content="{Binding SecondAnswer, Mode=OneWay}" HorizontalAlignment="Right" Margin="62,2,-50,0" Grid.Row="2" Width="435"/>
-            <CheckBox Style="{StaticResource WrappedCheckBoxStyleRight}" Content="{Binding FourthAnswer, Mode=OneWay}" HorizontalAlignment="Right" Margin="62,30,-50,0" Grid.Row="2" UseLayoutRounding="False" Width="430" Height="25"/>
+            <CheckBox Width="360" Height="44" Margin="30,10,0,0" VerticalAlignment="Top">
+                <TextBlock Text="{Binding SecondAnswer.content, Mode=OneWay}" Background="{Binding SecondAnswerBackground}" TextWrapping="Wrap"/>
+            </CheckBox>
+            <CheckBox Width="360" Height="44" Margin="30,10,0,0" VerticalAlignment="Bottom">
+                <TextBlock Text="{Binding FourthAnswer.content, Mode=OneWay}" Background="{Binding FourthAnswerBackground}" TextWrapping="Wrap"/>
+            </CheckBox>
         </StackPanel>
-        <Button Content="Poprzednie pytanie" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="54" Width="180"/>
-        <Button Content="Następne pytanie" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Height="54" Width="180"/>
+        <Button Content="Poprzednie pytanie" Command="{Binding PreviousQuestion}" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="54" Width="180"/>
+        <Button Content="Następne pytanie" Command="{Binding NextQuestion}" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Height="54" Width="180"/>
+        <Button Content="Zakończ quiz" Visibility="{Binding EndQuizVisibility}" Command="{Binding EndQuiz}" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Height="54" Width="180"/>
         <Frame Name="QuizFrame" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
-        <Label Content="{Binding QuestionNumber, Mode=OneWay}" HorizontalAlignment="Left" Margin="120,0,0,0" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="2" Height="42" Width="50"/>
+        <Label Content="{Binding QuestionNumber, Mode=OneWay}" HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="2" Height="42" Width="50"/>
     </Grid>
 </Page>

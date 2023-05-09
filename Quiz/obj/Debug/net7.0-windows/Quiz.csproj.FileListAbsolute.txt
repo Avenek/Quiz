@@ -46,3 +46,5 @@ C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\View\MainWind
 C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\View\QuizPage.g.cs
 C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\View\MainWindow.baml
 C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\View\QuizPage.baml
+C:\Users\Jakub\Desktop\Informatyka MS\C#\Quiz\Quiz\obj\Debug\net7.0-windows\SummarizePage.g.cs
+C:\Users\Jakub\Desktop\Informatyka MS\C#\Quiz\Quiz\obj\Debug\net7.0-windows\SummarizePage.baml

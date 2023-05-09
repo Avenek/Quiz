@@ -7,35 +7,42 @@ using System.Threading.Tasks;
 
 namespace Quiz.Model
 {
-    class Quiz
+    public class Quiz
     {
-        string Name { get; set; }
-        int Id { get; set; }
-        int CurrentQuestion { get; set; }
-        List<Question> Questions { get; set; }
-        bool ShowCorrectAnswers { get; set; }
-        int Points { get; set; }
-        Timer timer { get; set; }
+        public string Name { get; set; }
+        public int Id { get; set; }
+        public int CurrentQuestion { get; set; }
+        public List<Question> Questions { get; set; }
+        public bool ShowCorrectAnswers { get; set; }
+        public int Points { get; set; }
+        public Timer EndTimer { get; set; }
 
-        public void StartQuiz()
+        public Quiz(string name, int id, List<Question> questions, Timer timer)
         {
-            throw new NotImplementedException();
+            Name = name;
+            Id = id;
+            CurrentQuestion = 0;
+            Questions = questions;
+            ShowCorrectAnswers = false;
+            Points = 0;
+            EndTimer = timer;
         }
         public void NextQuestion() 
         {
-            throw new NotImplementedException();
+            CurrentQuestion += 1;
         }
         public void PreviousQuestion()
         {
-            throw new NotImplementedException();
+            CurrentQuestion -= 1;
         }
         public void SummarizeQuiz()
         {
-            throw new NotImplementedException();
+            ShowCorrectAnswers = true;
+            CurrentQuestion = 0;
         }
         public void EndQuiz()
         {
-            throw new NotImplementedException();
+            //Podliczenie punktów
         }
 
     }
