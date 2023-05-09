@@ -7,15 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="QuizPage.xaml.cs">
+    <Compile Update="SummarizePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\QuizPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="SummarizePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="QuizPage.xaml">
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\QuizPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -22,3 +22,27 @@ C:\Users\Jakub\Desktop\Informatyka MS\C#\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz
 C:\Users\Jakub\Desktop\Informatyka MS\C#\Quiz\Quiz\obj\Debug\net7.0-windows\ref\Quiz.dll
 C:\Users\Jakub\Desktop\Informatyka MS\C#\Quiz\Quiz\obj\Debug\net7.0-windows\QuizPage.g.cs
 C:\Users\Jakub\Desktop\Informatyka MS\C#\Quiz\Quiz\obj\Debug\net7.0-windows\QuizPage.baml
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\bin\Debug\net7.0-windows\Quiz.exe
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\bin\Debug\net7.0-windows\Quiz.deps.json
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\bin\Debug\net7.0-windows\Quiz.runtimeconfig.json
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\bin\Debug\net7.0-windows\Quiz.dll
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\bin\Debug\net7.0-windows\Quiz.pdb
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.csproj.AssemblyReference.cache
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz_MarkupCompile.cache
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz_MarkupCompile.lref
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.g.resources
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.AssemblyInfoInputs.cache
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.AssemblyInfo.cs
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.csproj.CoreCompileInputs.cache
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.dll
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\refint\Quiz.dll
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.pdb
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\Quiz.genruntimeconfig.cache
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\ref\Quiz.dll
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\View\MainWindow.g.cs
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\View\QuizPage.g.cs
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\View\MainWindow.baml
+C:\Users\Jakub\OneDrive\Desktop\Quiz\Quiz\obj\Debug\net7.0-windows\View\QuizPage.baml
