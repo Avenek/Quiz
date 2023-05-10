@@ -8,8 +8,9 @@ namespace Quiz.Model
 {
     public class Answer
     {
-        public string content {  get; set; }
-        public bool isCorrect { get; set; }
-        public bool isChoosen { get; set; }
+        public int Id { get; set; }
+        public string Content {  get; set; }
+        public bool IsCorrect { get; set; } = false;
+        public bool IsChoosen { get; set; } = false;
     }
 }

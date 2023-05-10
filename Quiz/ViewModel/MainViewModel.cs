@@ -19,21 +19,21 @@ namespace Quiz.ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
         {
-        public event PropertyChangedEventHandler PropertyChanged;
-        private readonly Model.MainModel model = new Model.MainModel();
 
-        private int selectedQuiz = 0;
-        public int SelectedQuiz
+        public event PropertyChangedEventHandler PropertyChanged;
+        public static readonly Model.MainModel model = new Model.MainModel();
+
+        private static int selectedQuiz=0;
+        public static int SelectedQuiz
         {
             get => selectedQuiz;
             set
             {
                 selectedQuiz = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedQuiz)));
             }
         }
-        private List<Model.Quiz> quizes;
-        public List<Model.Quiz> Quizes
+        private List<string> quizes;
+        public List<string> Quizes
         {
             get => quizes;
             set
@@ -65,7 +65,8 @@ namespace Quiz.ViewModel
 
         public MainViewModel()
         {
-
+            quizes = model.GetQuizListFromDatabase();
+            QuizViewModel quizViewModel = new QuizViewModel();
         }
 
         private ICommand startQuiz;
@@ -88,34 +89,19 @@ namespace Quiz.ViewModel
                              QuizListVisibility = Visibility.Collapsed;
                              StartQuizVisibility = Visibility.Collapsed;
                              frame.Navigate(new QuizPage());
-                            // model.StartQuiz();
-                             QuizViewModel quizViewModel = new QuizViewModel();
                          }
                      }
                     ,
-                    (o) => true
+                    (o) => selectedQuiz >-1
                     );
                 return startQuiz;
             }
         }
-        private ICommand selectQuiz;
-        public ICommand SelectQuiz
+        private void MainViewModel_ButtonClicked(object sender, EventArgs e)
         {
+            QuizListVisibility = Visibility.Visible;
+            StartQuizVisibility = Visibility.Visible;
 
-            get
-            {
-                if (selectQuiz == null)
-                    selectQuiz = new RelayCommand(
-
-                     (o) =>
-                     {
-                         throw new NotImplementedException();
-                     }
-                    ,
-                    (o) => true
-                    );
-                return selectQuiz;
-            }
         }
     }
 }

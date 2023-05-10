@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "QiG2I88elJlvc9/ijHbp2EG33dN1/OMEbAMt2GNnSkjBHdCwlgVWI07iEJsLfYNitGeRXpbBRCfG4DiUEToUJw==",
+  "dgSpecHash": "eduxF1aOQHTgBM2EaSWVnuS2u+lkvGZQqNL5pCwWKzJt9/GLRaJ6WSKgIwtvAu8/y/KqlDXYtxwdu7sOUGcFEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jakub\\Desktop\\Informatyka MS\\C#\\Quiz\\Quiz\\Quiz.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Jakub\\.nuget\\packages\\firstfloor.modernui\\1.0.6.7\\firstfloor.modernui.1.0.6.7.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.4\\sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.4\\sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\Jakub\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „FirstFloor.ModernUI 1.0.6.7” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net7.0-windows7.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "FirstFloor.ModernUI",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
 }

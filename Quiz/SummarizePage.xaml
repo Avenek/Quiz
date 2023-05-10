@@ -8,10 +8,25 @@
       mc:Ignorable="d"
       Title="Quiz" Height="400" Width="800">
     <Page.DataContext>
-        <vm:SummarizeViewModel x:Name="SummarizeViewModel"/>
+        <vm:SummarizeViewModel x:Name="summarizeViewModel"/>
     </Page.DataContext>
-
+    <Page.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="NavigationUIVisibility" Value="Hidden" />
+        </Style>
+    </Page.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Frame Name="SummarizeFrame"/>
+            <Label Content="Twój wynik to:" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <Label Content="{Binding Result, Mode=OneWay}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+        </StackPanel>
+        <Button Content="Sprawdź odpowiedzi" Command="{Binding CheckAnswers}" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Row="1" VerticalAlignment="Top" Height="75" Width="230"/>
+        <Button Content="Zakończ" Command="{Binding CloseWindow}" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="75" Width="230"/>
     </Grid>
 </Page>

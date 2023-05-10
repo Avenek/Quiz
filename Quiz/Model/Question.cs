@@ -8,7 +8,9 @@ namespace Quiz.Model
 {
     public class Question
     {
-        public string content {  get; set; }
-        public List<Answer> answers { get; set; }
+        public int Id { get; set; }
+        public string Content {  get; set; }
+        public List<Answer> Answers { get; set; }
+        public string Points { get; set; }
     }
 }
